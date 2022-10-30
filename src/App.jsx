@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import Profile from './components/Profile'
+import './styles/main.css'
 
 function App() {
 
   return (
-    <div className="App">
+    <>
       <Profile/>
-    </div>
+    </>
   )
 }
 

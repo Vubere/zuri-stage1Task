@@ -1,10 +1,14 @@
-import profilePic from '../assets/profilePics.jpg'
+import profilePic from "../assets/profilePics.jpg";
 
-export default function Profile()  {
+export default function Profile() {
   return (
     <header className="profile">
-      <img src={profilePic} alt="victors picture" />
-      <p id="twitter">@VictorUbere</p>
+      <div>
+        <div className="img">
+          <img src={profilePic} alt="victors picture" />
+        </div>
+        <p id="twitter">@VictorUbere</p>
+      </div>
     </header>
-  )
+  );
 }

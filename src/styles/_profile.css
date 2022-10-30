@@ -1,0 +1,30 @@
+
+header.profile{
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid black;
+  display: grid;
+  place-items: center;
+}
+header.profile .img{
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.profile div{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.profile img{
+  width: 80px;
+}
+#twitter{
+  width: 100%;
+  text-align: center;
+}
