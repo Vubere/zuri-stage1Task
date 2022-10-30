@@ -10,7 +10,7 @@ export default function Links() {
       <a href="https://training.zuri.team/">
         <button id="btn_zuri">Zuri Team</button>
       </a>
-      <a href="https:///books.zuri.team">
+      <a href="https:///books.zuri.team" title="Find books about design and coding.">
         <button id="books">Zuri Books</button>
       </a>
       <a href="https://books.zuri.team/python-for-beginners?ref_id=Victor_Ubere">
