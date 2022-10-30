@@ -1,4 +1,4 @@
-import slack from "../assets/slack.png";
+import slack from "../assets/Slack.png";
 import github from "../assets/githubLogo.png";
 
 export default function Links() {
