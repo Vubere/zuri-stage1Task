@@ -1,29 +1,24 @@
-
-
-
 export default function Links() {
   return (
     <main>
-      <button id="twitter_link">
-        <a href="https://twitter.com/VictorUbere">Twitter Link</a>
-      </button>
-      <button id="btn_zuri">
-        <a href="https://training.zuri.team/">Zuri Team</a>
-      </button>
-      <button id="books">
-        <a href="https:///books.zuri.team">Zuri Books</a>
-      </button>
-      <button id="book_python">
-        <a href="https://books.zuri.team.python-for-beginners?ref_id=Victor_Ubere">
-          Python Books
-        </a>
-      </button>
-      <button id="pitch">
-        <a href="https://background.zuri.teams">Background Check For Coders</a>
-      </button>
-      <button id="book_design">
-        <a href="https://books.zuri.team/design-rules">Design Books</a>
-      </button>  
+      <a href="https://twitter.com/VictorUbere">
+        <button id="twitter_link">Twitter Link</button>
+      </a>
+      <a href="https://training.zuri.team/">
+        <button id="btn_zuri">Zuri Team</button>
+      </a>
+      <a href="https:///books.zuri.team">
+        <button id="books">Zuri Books</button>
+      </a>
+      <a href="https://books.zuri.team/python-for-beginners?ref_id=Victor_Ubere">
+        <button id="book_python">Python Books</button>
+      </a>
+      <a href="https://background.zuri.team">
+        <button id="pitch">Background Check For Coders</button>
+      </a>
+      <a href="https://books.zuri.team/design-rules">
+        <button id="book_design">Design Books</button>
+      </a>
     </main>
   );
 }

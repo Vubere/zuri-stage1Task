@@ -6,15 +6,20 @@ main{
   align-items: center;
   padding: 5px;
 }
-main>button{
+main>a{
   width: 95%;
   margin: 5px;
   padding: 20px;
   border-radius: 5px;
   border: none;
   background-color: #8889;
-}
-main a{
+  max-width: 1000px;
   text-decoration: none;
   color: black;
+  display: grid;
+  place-items: center;
+}
+main button{
+  background-color: transparent;
+  cursor: pointer;
 }
