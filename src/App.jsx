@@ -1,5 +1,8 @@
 import { useState } from 'react'
+
 import Profile from './components/Profile'
+import Links from './components/Link'
+
 import './styles/main.css'
 
 function App() {
@@ -7,6 +10,7 @@ function App() {
   return (
     <>
       <Profile/>
+      <Links/>
     </>
   )
 }

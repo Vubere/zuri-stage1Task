@@ -22,11 +22,8 @@ export default function Links() {
         <a href="https://background.zuri.teams">Background Check For Coders</a>
       </button>
       <button id="book_design">
-        <a href="https://books.zuri.team/design-rules"></a>
-      </button>
-      <button>
-        <a href="">Design Books</a>
-      </button>
+        <a href="https://books.zuri.team/design-rules">Design Books</a>
+      </button>  
     </main>
   );
 }

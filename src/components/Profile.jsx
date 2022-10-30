@@ -7,7 +7,7 @@ export default function Profile() {
         <div className="img">
           <img src={profilePic} alt="victors picture" />
         </div>
-        <p id="twitter">@VictorUbere</p>
+        <p id="twitter">Victor Ubere</p>
       </div>
     </header>
   );
