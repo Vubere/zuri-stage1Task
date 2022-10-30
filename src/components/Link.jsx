@@ -1,3 +1,6 @@
+import slack from "../assets/slack.png";
+import github from "../assets/githubLogo.png";
+
 export default function Links() {
   return (
     <main>
@@ -19,6 +22,12 @@ export default function Links() {
       <a href="https://books.zuri.team/design-rules">
         <button id="book_design">Design Books</button>
       </a>
+      <div className="slack_github">
+        <img src={slack} alt="slack logo" id="slack"/>
+        <a href="https://github.com/Vubere">
+          <img src={github} alt="github logo" />
+        </a>
+      </div>
     </main>
   );
 }

@@ -1,10 +1,10 @@
 main{
   width: 100vw;
   display: flex;
-  height: 500px;
   flex-direction: column;
   align-items: center;
   padding: 5px;
+  overflow: auto;
 }
 main>a{
   width: 95%;
@@ -22,4 +22,21 @@ main>a{
 main button{
   background-color: transparent;
   cursor: pointer;
+}
+.slack_github{
+  margin-top: 10px;
+  width: 30%;
+  max-width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  overflow: hidden;
+}
+.slack_github img{
+  width: 20px;
+  margin: 0;
+  height: 20px;
+}
+#slack{
+  width: 35px;
 }
