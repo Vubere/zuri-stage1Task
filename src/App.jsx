@@ -5,13 +5,14 @@ import Links from './components/Link'
 import Footer from './components/Footer'
 
 import './styles/main.css'
+import { Outlet } from 'react-router-dom'
+
 
 function App() {
 
   return (
     <>
-      <Profile/>
-      <Links/>
+      <Outlet/>
       <Footer/>
     </>
   )
