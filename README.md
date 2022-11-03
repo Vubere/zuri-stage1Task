@@ -1,1 +1,1 @@
-A personal profile page. Created to fulfill Zuri Stage 1 task
+A personal profile page. Created to fulfill zuri task
