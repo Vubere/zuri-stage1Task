@@ -22,6 +22,9 @@ export default function Links() {
       <a href="https://books.zuri.team/design-rules">
         <button id="book__design">Design Books</button>
       </a>
+      <a href="/contact">
+        <button id="contact">Contact Me</button>
+      </a>
       <div className="slack_github">
         <img src={slack} alt="slack logo" id="slack"/>
         <a href="https://github.com/Vubere">
