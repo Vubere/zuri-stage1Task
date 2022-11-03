@@ -14,7 +14,7 @@ footer{
 footer>p{
   font-weight: lighter;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   footer{
     height: 140px;
     flex-direction: column;

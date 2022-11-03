@@ -35,9 +35,6 @@ main button{
 }
 .slack_github img{
   width: 20px;
-  margin: 0;
+  margin: 10px;
   height: 20px;
-}
-#slack{
-  width: 35px;
 }
