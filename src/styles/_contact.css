@@ -30,7 +30,7 @@
 .center input, textarea{
   border: 1px solid #3334;
   border-radius: 7px;
-  padding: 7px;
+  padding: 12px;
   margin-top: 8px;
 }
 .center textarea{
@@ -49,12 +49,14 @@
   display: flex;
   flex-direction: row;
   justify-content: start;
-  align-items: flex-start;
+  align-items: center;
   font-size: 0.85em;
+  margin-bottom:40px;
 }
 .center label[for=checkbox] input{
   width: 10px;
   margin: 10px;
+
 }
 .center button{
   border-radius: 7px;
@@ -65,10 +67,13 @@
 }
 @media screen and (min-width: 550px) {
   .center form .names{
-    flex-direction: row;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 47.5% 47.5%;
+    gap: 5%;
   }
   .center form .names input{
     display: block;
-    margin: 5px;
+    width: 100%;
   }
 }
