@@ -16,7 +16,7 @@ export default function Contact() {
       <div className="center">
         <h2>Contact Me</h2>
         <p>Hi there, contact me to ask me about anything you have in mind.</p>
-        <form>
+        <form onSubmit={(e)=>e.preventDefault()}>
           <div className="names">
             <label htmlFor="first_name">
               First name
