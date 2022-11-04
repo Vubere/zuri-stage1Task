@@ -1,0 +1,74 @@
+
+.contact{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .center{
+  width: 90vw;
+  max-width: 600px;
+}
+.center>h2{
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+.center>p{
+  font-size: 0.85em;
+  margin-bottom: 30px;
+}
+.center form{
+  width: 100%;
+}
+.center form .names{
+  display: flex;
+  flex-direction: column;
+}
+.center input, textarea{
+  border: 1px solid #3334;
+  border-radius: 7px;
+  padding: 7px;
+  margin-top: 8px;
+}
+.center textarea{
+  resize: none;
+}
+.center input{
+  width: 100%;
+}
+.center form label{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.center label[for=checkbox]{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: flex-start;
+  font-size: 0.85em;
+}
+.center label[for=checkbox] input{
+  width: 10px;
+  margin: 10px;
+}
+.center button{
+  border-radius: 7px;
+  color: white;
+  background-color: rgba(74, 74, 226, 0.918);
+  width: 100%;
+  padding: 15px;
+}
+@media screen and (min-width: 550px) {
+  .center form .names{
+    flex-direction: row;
+  }
+  .center form .names input{
+    display: block;
+    margin: 5px;
+  }
+}

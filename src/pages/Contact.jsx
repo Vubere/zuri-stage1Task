@@ -1,23 +1,40 @@
 export default function Contact() {
   return (
-    <section className="contact me">
-      <h2>Contact Me</h2>
-      <p>Hi there, contact me to ask me about anything you have in mind.</p>
-      <form>
-        <div className="names">
-          <label htmlFor="first_name">First name</label>
-          <input type="name" id="first_name" />
-          <label htmlFor="last_name">Last name</label>
-          <input type="name" id="last_name" />
-        </div>
-        <label htmlFor="email">Email</label>
-        <input type="text" id="email" />
-        <label htmlFor="message"></label>
-        <textarea name="" id="message" cols="30" rows="10"></textarea>
-        <input type="checkbox" name="" id="checkbox" />
-        <label htmlFor="checkbox">You agree to providing your data to Victor Ubere who may contact you.</label>
-        <button id="btn__submit">submit</button>
-      </form>
+    <section className="contact">
+      <div className="center">
+        <h2>Contact Me</h2>
+        <p>Hi there, contact me to ask me about anything you have in mind.</p>
+        <form>
+          <div className="names">
+            <label htmlFor="first_name">
+              First name
+              <input type="name" id="first_name" 
+              placeholder="Enter your first name"/>
+            </label>
+            <label htmlFor="last_name">
+              Last name
+              <input type="name" id="last_name" 
+              placeholder="Enter your last name"/>
+            </label>
+          </div>
+          <label htmlFor="email">
+            Email
+            <input type="text" id="email" 
+            placeholder="yourname@email.com"/>
+          </label>
+          <label htmlFor="message">
+            Message
+            <textarea name="" id="message" cols="30" rows="10"
+            placeholder="Send me a message and I'll reply you as soon as possible"></textarea>
+          </label>
+          <label htmlFor="checkbox">
+          <input type="checkbox" name="" id="checkbox" />
+             You agree to providing your data to Victor Ubere who may contact
+            you.
+          </label>
+          <button id="btn__submit">Send message</button>
+        </form>
+      </div>
     </section>
   );
 }
