@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Contact() {
   const [firstName, setFirstName] = useState('')
@@ -6,6 +6,10 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [checked, setChecked] = useState(false)
+
+  useEffect(()=>{
+    document.title = 'Contact Victor Ubere'
+  },[])
 
   return (
     <section className="contact">
