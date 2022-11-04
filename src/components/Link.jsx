@@ -1,5 +1,6 @@
 import slack from "../assets/Slack.png";
 import github from "../assets/githubLogo.png";
+import { Link } from "react-router-dom";
 
 export default function Links() {
   return (
@@ -22,9 +23,9 @@ export default function Links() {
       <a href="https://books.zuri.team/design-rules">
         <button id="book__design">Design Books</button>
       </a>
-      <a href="/contact">
+      <Link to="/contact">
         <button id="contact">Contact Me</button>
-      </a>
+      </Link>
       <div className="slack_github">
         <img src={slack} alt="slack logo" id="slack"/>
         <a href="https://github.com/Vubere">
