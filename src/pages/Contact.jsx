@@ -7,16 +7,38 @@ export default function Contact() {
   const [message, setMessage] = useState('')
   const [checked, setChecked] = useState(false)
 
+  const [errorEmail, setErrorEmail] = useState(false)
+  const [errorMessage, setErrorMessage] = useState(false)
+
   useEffect(()=>{
     document.title = 'Contact Victor Ubere'
   },[])
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(email==''){
+      setErrorEmail(true)
+      return
+    }else{
+      if(errorEmail)
+      setErrorEmail(false)
+    }
+    if(message==''){
+      setErrorMessage(true)
+      return
+    }else{
+      if(errorMessage)
+      setErrorMessage(false)
+    }
+    setMessage('')
+  }
+
 
   return (
     <section className="contact">
       <div className="center">
         <h2>Contact Me</h2>
         <p>Hi there, contact me to ask me about anything you have in mind.</p>
-        <form onSubmit={(e)=>e.preventDefault()}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <div className="names">
             <label htmlFor="first_name">
               First name
@@ -47,7 +69,20 @@ export default function Contact() {
               placeholder="yourname@email.com"
               value={email}
               onChange={({ target }) => setEmail(target.value)}
+              style={{
+                border: `${errorEmail ? "1px solid red" : "1px solid #3337"}`,
+              }}
             />
+            <div
+              className="errorMessage"
+              style={{
+                color: "red",
+                fontSize: "0.6em",
+                display: `${errorEmail ? "block" : "none"}`,
+              }}
+            >
+              Please enter your email
+            </div>
           </label>
           <label htmlFor="message">
             Message
@@ -59,7 +94,20 @@ export default function Contact() {
               placeholder="Send me a message and I'll reply you as soon as possible"
               value={message}
               onChange={({ target }) => setMessage(target.value)}
+              style={{
+                border: `${errorMessage ? "1px solid red" : "1px solid #3337"}`,
+              }}
             />
+            <div
+              className="errorMessage"
+              style={{
+                color: "red",
+                fontSize: "0.6em",
+                display: `${errorMessage ? "block" : "none"}`,
+              }}
+            >
+              Please enter a message
+            </div>
           </label>
           <label htmlFor="checkbox">
             <input
@@ -67,12 +115,24 @@ export default function Contact() {
               name=""
               id="checkbox"
               value={checked}
-              onChange={({ target }) => setChecked(target.value)}
+              onChange={({ target }) => {
+                if (checked) {
+                  setChecked(false);
+                } else {
+                  setChecked(true);
+                }
+              }}
             />
             You agree to providing your data to Victor Ubere who may contact
             you.
           </label>
-          <button id="btn__submit">Send message</button>
+          <button
+            id="btn__submit"
+            className={`${checked ? "" : "disabled"}`}
+            disabled={!checked}
+          >
+            Send message
+          </button>
         </form>
       </div>
     </section>
