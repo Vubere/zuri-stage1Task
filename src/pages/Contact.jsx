@@ -7,6 +7,8 @@ export default function Contact() {
   const [message, setMessage] = useState('')
   const [checked, setChecked] = useState(false)
 
+  const [errorfName, setfName] = useState(false)
+  const [errorlName, setlName] = useState(false)
   const [errorEmail, setErrorEmail] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
 
@@ -15,6 +17,20 @@ export default function Contact() {
   },[])
   const handleSubmit = (e) => {
     e.preventDefault()
+    if(firstName==''){
+      setfName(true)
+      return
+    }else{
+      if(errorfName)
+      setfName(false)
+    }
+    if(lastName==''){
+      setlName(true)
+      return
+    }else{
+      if(errorlName)
+      setlName(false)
+    }
     if(email==''){
       setErrorEmail(true)
       return
@@ -48,7 +64,20 @@ export default function Contact() {
                 placeholder="Enter your first name"
                 value={firstName}
                 onChange={({ target }) => setFirstName(target.value)}
+                style={{
+                  border: `${errorfName ? "1px solid red" : "1px solid #3337"}`,
+                }}
               />
+              <div
+                className="errorMessage"
+                style={{
+                  color: "red",
+                  fontSize: "0.6em",
+                  display: `${errorfName ? "block" : "none"}`,
+                }}
+              >
+                Please enter first name
+              </div>
             </label>
             <label htmlFor="last_name">
               Last name
@@ -58,7 +87,20 @@ export default function Contact() {
                 placeholder="Enter your last name"
                 value={lastName}
                 onChange={({ target }) => setLastName(target.value)}
+                style={{
+                  border: `${errorlName ? "1px solid red" : "1px solid #3337"}`,
+                }}
               />
+              <div
+                className="errorMessage"
+                style={{
+                  color: "red",
+                  fontSize: "0.6em",
+                  display: `${errorlName ? "block" : "none"}`,
+                }}
+              >
+                Please enter last name
+              </div>
             </label>
           </div>
           <label htmlFor="email">
