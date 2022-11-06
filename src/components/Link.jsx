@@ -5,29 +5,36 @@ import { Link } from "react-router-dom";
 export default function Links() {
   return (
     <main>
-      <a href="https://twitter.com/VictorUbere">
-        <button id="twitter__link">Twitter Link</button>
+      <a href="https://twitter.com/VictorUbere" id="twitter__link">
+       Twitter Link
       </a>
-      <a href="https://training.zuri.team/">
-        <button id="btn__zuri">Zuri Team</button>
+      <a href="https://training.zuri.team/" id="btn__zuri">
+        Zuri Team
       </a>
-      <a href="https:///books.zuri.team" title="Find books about design and coding.">
-        <button id="books">Zuri Books</button>
+      <a
+        href="https:///books.zuri.team"
+        title="Find books about design and coding."
+        id="books"
+      >
+        Zuri Books
       </a>
-      <a href="https://books.zuri.team/python-for-beginners?ref_id=Victor_Ubere">
-        <button id="book__python">Python Books</button>
+      <a
+        href="https://books.zuri.team/python-for-beginners?ref_id=Victor_Ubere"
+        id="book__python"
+      >
+       Python Books
       </a>
-      <a href="https://background.zuri.team">
-        <button id="pitch">Background Check For Coders</button>
+      <a href="https://background.zuri.team" id="pitch">
+       Background Check For Coders
       </a>
-      <a href="https://books.zuri.team/design-rules">
-        <button id="book__design">Design Books</button>
+      <a href="https://books.zuri.team/design-rules" id="book__design">
+        Design Books
       </a>
-      <a href="/contact">
-        <button id="contact">Contact Me</button>
+      <a href="/contact" id="contact">
+        Contact Me
       </a>
       <div className="slack_github">
-        <img src={slack} alt="slack logo" id="slack"/>
+        <img src={slack} alt="slack logo" id="slack" />
         <a href="https://github.com/Vubere">
           <img src={github} alt="github logo" />
         </a>
