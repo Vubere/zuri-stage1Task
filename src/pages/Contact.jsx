@@ -6,6 +6,7 @@ export default function Contact() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [checked, setChecked] = useState(false)
+  const [messageSent, setMessageSent] = useState(false)
 
   const [errorfName, setfName] = useState(false)
   const [errorlName, setlName] = useState(false)
@@ -45,7 +46,11 @@ export default function Contact() {
       if(errorMessage)
       setErrorMessage(false)
     }
+    setLastName('')
+    setFirstName('')
+    setEmail('')
     setMessage('')
+    setMessageSent(true)
   }
 
 
@@ -168,6 +173,15 @@ export default function Contact() {
             You agree to providing your data to Victor Ubere who may contact
             you.
           </label>
+          {messageSent&&<p
+          onBlur={()=>setMessageSent(false)}> Your message was sent! <button 
+          onClick={()=>setMessageSent(false)}
+          style={{
+            'width': '70px',
+            'padding': '7px',
+            'borderRadius': '7px',
+            'margin': '5px'
+          }}>Ok</button></p>}
           <button
             id="btn__submit"
             className={`${checked ? "" : "disabled"}`}
