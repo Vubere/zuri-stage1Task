@@ -96,7 +96,7 @@
 .center button{
   border-radius: 7px;
   color: white;
-  background-color: rgba(74, 74, 226, 0.918);
+  background: #1570EF;
   width: 100%;
   padding: 15px;
   display: flex;

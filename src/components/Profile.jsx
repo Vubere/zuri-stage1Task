@@ -5,7 +5,9 @@ import icon from "../assets/icon.png";
 export default function Profile() {
   return (
     <header className="profile">
-      <div className="icons">
+      <div className="icons" style={{
+        'display':'none'
+      }}>
         <div className="content">
           <img src={share} alt="share" className="share" id="share"/>
           <div className="dots_horizontal">
