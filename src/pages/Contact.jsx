@@ -1,64 +1,64 @@
 import { useEffect, useState } from "react";
 
 export default function Contact() {
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const [checked, setChecked] = useState(false)
-  const [messageSent, setMessageSent] = useState(false)
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [checked, setChecked] = useState(false);
+  const [messageSent, setMessageSent] = useState(false);
 
-  const [errorfName, setfName] = useState(false)
-  const [errorlName, setlName] = useState(false)
-  const [errorEmail, setErrorEmail] = useState(false)
-  const [errorMessage, setErrorMessage] = useState(false)
-
-  useEffect(()=>{
-    document.title = 'Contact Victor Ubere'
-  },[])
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if(firstName==''){
-      setfName(true)
-      return
-    }else{
-      if(errorfName)
-      setfName(false)
-    }
-    if(lastName==''){
-      setlName(true)
-      return
-    }else{
-      if(errorlName)
-      setlName(false)
-    }
-    if(email==''){
-      setErrorEmail(true)
-      return
-    }else{
-      if(errorEmail)
-      setErrorEmail(false)
-    }
-    if(message==''){
-      setErrorMessage(true)
-      return
-    }else{
-      if(errorMessage)
-      setErrorMessage(false)
-    }
-    setLastName('')
-    setFirstName('')
-    setEmail('')
-    setMessage('')
-    setMessageSent(true)
+  const [errorfName, setfName] = useState(false);
+  const [errorlName, setlName] = useState(false);
+  const [errorEmail, setErrorEmail] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+  if(messageSent){
+    setTimeout(()=>setMessageSent(false), 2000)
   }
 
+  useEffect(() => {
+    document.title = "Contact Victor Ubere";
+  }, []);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (firstName == "") {
+      setfName(true);
+      return;
+    } else {
+      if (errorfName) setfName(false);
+    }
+    if (lastName == "") {
+      setlName(true);
+      return;
+    } else {
+      if (errorlName) setlName(false);
+    }
+    if (email == "") {
+      setErrorEmail(true);
+      return;
+    } else {
+      if (errorEmail) setErrorEmail(false);
+    }
+    if (message == "") {
+      setErrorMessage(true);
+      return;
+    } else {
+      if (errorMessage) setErrorMessage(false);
+    }
+    setLastName("");
+    setFirstName("");
+    setEmail("");
+    setMessage("");
+    setMessageSent(true);
+  };
 
   return (
     <section className="contact">
       <div className="center">
-        <h2>Contact Me</h2>
-        <p>Hi there, contact me to ask me about anything you have in mind.</p>
+        <header>
+          <h2>Contact Me</h2>
+          <p>Hi there, contact me to ask me about anything you have in mind.</p>
+        </header>
         <form onSubmit={(e) => handleSubmit(e)}>
           <div className="names">
             <label htmlFor="first_name">
@@ -173,15 +173,11 @@ export default function Contact() {
             You agree to providing your data to Victor Ubere who may contact
             you.
           </label>
-          {messageSent&&<p
-          onBlur={()=>setMessageSent(false)}> Your message was sent! <button 
-          onClick={()=>setMessageSent(false)}
-          style={{
-            'width': '70px',
-            'padding': '7px',
-            'borderRadius': '7px',
-            'margin': '5px'
-          }}>Ok</button></p>}
+          {messageSent && (
+            <p>
+              Your message was sent!
+            </p>
+          )}
           <button
             id="btn__submit"
             className={`${checked ? "" : "disabled"}`}

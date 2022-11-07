@@ -1,58 +1,401 @@
-@import url('./_profile.css');
-@import url('./_links.css');
-@import url('./_footer.css');
-@import url('./_contact.css');
+@import url("./_contact.css");
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 
-*{
+* {
   margin: 0;
   padding: 0;
   border: none;
   box-sizing: border-box;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
 }
-body{
+body {
   width: 100vw;
+  display: flex;
+  justify-content: center;
   height: 100vh;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 @keyframes loading {
-  0%{
+  0% {
     scale: 0.9 0.9;
   }
-  20%{
+  20% {
     scale: 0.8 0.8;
   }
-  40%{
+  40% {
     scale: 0.75 0.75;
   }
-  50%{
+  50% {
     scale: 0.8 0.8;
   }
-  70%{
+  70% {
     scale: 0.9 0.9;
   }
-  90%{
+  90% {
     scale: 0.95 0.95;
   }
-  100%{
+  100% {
     scale: 1 1;
   }
 }
-.loading{
+.loading {
   width: 100vw;
   height: 70vh;
   display: inline-grid;
   place-items: center;
 }
-.loading img{
+.loading img {
   width: 40px;
   height: 40px;
   animation-name: loading;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+}
+main {
+  width: 100%;
+  margin-top: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 32px;
+  gap: 32px;
+  width: 100vw;
+  background-color: #ffffff;
+}
+
+section.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 56px;
+  width: calc(100vw - 80px);
+}
+section.content header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  height: 152px;
+  width: 100%;
+}
+section.content header .img {
+  width: 88px;
+  height: 100px;
+}
+#profile__img {
+  width: 88px;
+  height: 88px;
+  border-radius: 275px;
+}
+#twitter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Inter";
+  gap: 8px;
+  width: calc(100vw - 80px);
+  height: 30px;
+  text-align: center;
+}
+header .icons {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 20%;
+  border: 1px dashed #d0d5dd;
+  border-radius: 20px;
+  background-color: #ffffff;
+  top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+header .icons .content {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  top: 15%;
+  left: 15%;
+  right: 15%;
+  bottom: 15%;
+}
+header .icons .content > img {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12.5%;
+  right: 11.53%;
+  top: 14.95%;
+  bottom: 14.95%;
+}
+#content_icon {
+  display: none;
+}
+section.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 24px;
+  width: calc(100% - 20px);
+  
+}
+section.links > a {
+  margin: 0 auto;
+  width: calc(100% - 20px);
+  max-width: 1100px;
+  height: 76px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #eaecf0;
+  align-items: center;
+  gap: 12px;
+  filter: drop-shadow(0px 1px 2px rgba(16, 24, 40, 0.05));
+  font-family: "Inter";
+  font-style: normal;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #101828;
+  text-decoration: none;
+}
+#social {
+  padding: 24px 0px;
+  margin-top: 24px;
+  gap: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 72px;
+  width: calc(100vw - 40px);
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+}
+
+#social img {
+  height: 23.45px;
+  width: 24px;
+}
+#slack {
+  width: 18px;
+  height: 18px;
+}
+footer {
+  width: 100vw;
+  height: 160px;
+  background-color: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 32px;
+  gap: 32px;
+  width: 100vw-40px;
+  height: 64px;
+}
+footer .content {
+  width: calc(100% - 30px);
+  height: 64px;
+  padding: 32px 0px 0px;
+  display: flex;
+  border-top: 1px solid #eaecf0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#zuri_internship_logo {
+  width: 20%;
+  max-width: 123px;
+  height: 24.74px;
+}
+footer p {
+  width: 60%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #667085;
+}
+#I4G {
+  width: 20%;
+  max-width: 123px;
+  height: 32px;
+}
+@media screen and (max-width: 500px) {
+  main {
+    width: 100vw;
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 32px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 64px 0px 32px;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100vw;
+    background-color: #ffffff;
+  }
+  header.profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    isolation: isolate;
+    width: 100vw;
+    height: 140px;
+  }
+  #profile__img {
+    width: 88px;
+    height: 88px;
+    border-radius: 275px;
+  }
+  #twitter {
+    width: 100vw;
+    height: 28px;
+    font-weight: 700;
+  }
+  .icons {
+    position: absolute;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    right: 0px;
+    background-color: #ffffff;
+    border: 1px dashed #d0d5dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #dots_horizontal {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  #share {
+    display: none;
+  }
+  #content_icon {
+    display: block;
+    width: 100%;
+  }
+  section.links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    width: 100vw;
+  }
+  section.links>a {
+    width: 343px;
+    height: 68px;
+    background-color: #eaecf0;
+    border: #eaecf0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 24px 32px;
+    font-size: 14px;
+    font-family: "Inter";
+    font-weight: 500;
+    line-height: 20px;
+    color: #101828;
+  }
+  #social {
+    display: flex;
+    z-index: 4;
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 0px;
+    gap: 64px;
+    width: 375px;
+    height: 72px;
+    background-color: #ffffff;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 0px;
+    gap: 64px;
+    width: 375px;
+    height: 196px;
+    background-color: #ffffff;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 16px;
+    gap: 32px;
+    width: 375px;
+  }
+  footer .content {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 5px;
+    gap: 16px;
+    height: 196px;
+  }
+  #zuri_internship_logo {
+    width: 120px;
+    height: 24.74px;
+  }
+  footer p {
+    width: 100vw;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    color: #667085;
+  }
+  #I4G {
+    width: 120px;
+    height: 32px;
+  }
 }

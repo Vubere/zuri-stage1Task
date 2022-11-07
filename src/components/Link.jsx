@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Links() {
   return (
-    <main>
+    <section className="links">
       <a href="https://twitter.com/VictorUbere" id="twitter__link">
        Twitter Link
       </a>
@@ -33,12 +33,12 @@ export default function Links() {
       <a href="/contact" id="contact">
         Contact Me
       </a>
-      <div className="slack_github">
+      <section id="social">
         <img src={slack} alt="slack logo" id="slack" />
         <a href="https://github.com/Vubere">
           <img src={github} alt="github logo" />
         </a>
-      </div>
-    </main>
+      </section>
+    </section>
   );
 }

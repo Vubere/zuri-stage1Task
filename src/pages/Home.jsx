@@ -8,9 +8,9 @@ export default function Home() {
     document.title = "Victor's Zuri Link Tree";
   }, []);
   return (
-    <>
+    <section className="content">
       <Profile />
       <Links />
-    </>
+    </section>
   );
 }
